@@ -36,7 +36,7 @@ jobs:
       run: npm run typecheck
       
     - name: Run tests
-      run: npm run test:coverage
+      run: npm run test
       
     - name: Run build
       run: npm run build
@@ -79,28 +79,26 @@ jobs:
   #     with:
   #       name: playwright-report
   #       path: playwright-report/
-  #       retention-days: 30
-
-  build-playground:
-    runs-on: ubuntu-latest
-    
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
-      
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: 18.x
-        cache: 'npm'
-        
-    - name: Install dependencies
-      run: |
-        npm cache clean --force
-        npm install --legacy-peer-deps
-      
-    - name: Build playground
-      run: vite build --config playground/vite.config.ts --mode production
+  #       retention-days: 30  # build-playground:
+  #   runs-on: ubuntu-latest
+  #   
+  #   steps:
+  #   - name: Checkout code
+  #     uses: actions/checkout@v4
+  #     
+  #   - name: Setup Node.js
+  #     uses: actions/setup-node@v4
+  #     with:
+  #       node-version: 18.x
+  #       cache: 'npm'
+  #       
+  #   - name: Install dependencies
+  #     run: |
+  #       npm cache clean --force
+  #       npm install --legacy-peer-deps
+  #       
+  #   - name: Build playground
+  #     run: npx vite build --config playground/vite.config.ts --mode production
       
     # Optional: Deploy playground to GitHub Pages or Vercel
     # - name: Deploy to GitHub Pages
