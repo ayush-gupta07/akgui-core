@@ -15,10 +15,10 @@ export const PlaygroundLayout: React.FC<PlaygroundLayoutProps> = ({ children }) 
   // Handle responsive behavior
   useEffect(() => {
     const handleResize = () => {
-      const mobile = window.innerWidth < 768
+      const mobile = window.innerWidth < 900 
       setIsMobile(mobile)
       
-      // Auto-open sidebar on desktop, close on mobile
+      // Auto-open sidebar on desktop, close on mobile/tablet
       if (!mobile && !isSidebarOpen) {
         setIsSidebarOpen(true)
       } else if (mobile && isSidebarOpen) {

@@ -30,7 +30,10 @@ export const CodeBlock: React.FC<CodeBlockProps> = ({
     <div className="code-block">
       {title && (
         <div className="code-block-header">
-          <span className="code-block-title">{title}</span>
+          <span className="code-block-title">
+            <span className="code-icon">🚀</span>
+            {title}
+          </span>
           {copyable && (
             <button
               className={`copy-button ${copied ? 'copied' : ''}`}

@@ -19,20 +19,24 @@ export const SimpleComponentDemo: React.FC<SimpleComponentDemoProps> = ({
         <div className="examples-tab">
           <div className="examples-grid">
             {config.examples.map((example, index) => (
-              <div key={index} className="example-group">
-                <h3 className="example-title">{example.title}</h3>
-                {example.description && (
-                  <p className="example-description">{example.description}</p>
-                )}
-                <div className="example-preview">
-                  {example.component}
+              <div key={index} className="example-container">
+                <div className="example-header">
+                  <h3 className="example-title">{example.title}</h3>
+                  {example.description && (
+                    <p className="example-description">{example.description}</p>
+                  )}
                 </div>
-                <div className="example-code">
-                  <CodeBlock
-                    title="Code"
-                    code={example.code}
-                    language="jsx"
-                  />
+                <div className="example-group">
+                  <div className="example-preview">
+                    {example.component}
+                  </div>
+                  <div className="example-code">
+                    <CodeBlock
+                      title="Code"
+                      code={example.code}
+                      language="jsx"
+                    />
+                  </div>
                 </div>
               </div>
             ))}
@@ -139,7 +143,6 @@ export const SimpleComponentDemo: React.FC<SimpleComponentDemoProps> = ({
       <div className="component-info">
         <h2>{config.name}</h2>
         <p>{config.description}</p>
-        <span className="category-badge">{config.category}</span>
       </div>
       <ComponentTabs tabs={tabs} defaultTab="examples" />
     </div>
