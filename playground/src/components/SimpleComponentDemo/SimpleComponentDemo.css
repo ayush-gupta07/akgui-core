@@ -1,0 +1,329 @@
+.simple-component-demo {
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+}
+
+.component-info {
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid #e5e7eb;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  text-align: center;
+}
+
+.component-info h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.component-info p {
+  margin: 0 0 1rem 0;
+  color: #64748b;
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.category-badge {
+  display: inline-block;
+  background: #3b82f6;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* Examples Tab */
+.examples-tab {
+  padding: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.examples-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+}
+
+.example-group {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.example-title {
+  margin: 0;
+  padding: 1.25rem 1.5rem 0.5rem 1.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.example-description {
+  margin: 0 0 0.75rem 0;
+  padding: 0 1.5rem;
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+.example-preview {
+  padding: 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+  background: linear-gradient(135deg, #fafbfc 0%, #f8fafc 100%);
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Special styling for different example types */
+.example-preview > div[style*="display: flex"] {
+  width: 100%;
+  justify-content: center;
+}
+
+.example-code {
+  background: #1e293b;
+}
+
+.example-code .code-block {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+}
+
+/* Ensure code text is visible in examples */
+.example-code .code-block pre,
+.example-code .code-block code {
+  color: #f9fafb !important;
+}
+
+.example-code .code-block-content {
+  background: #1f2937 !important;
+}
+
+/* Documentation Tab */
+.documentation-tab {
+  padding: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.documentation-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.doc-section h2 {
+  margin: 0 0 1.5rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1e293b;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 0.5rem;
+}
+
+.doc-description {
+  color: #64748b;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Props Table */
+.props-table {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+}
+
+.props-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 2fr;
+  gap: 1rem;
+  background: #f9fafb;
+  padding: 1rem;
+  font-weight: 600;
+  color: #374151;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.props-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.prop-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 2fr;
+  gap: 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid #f3f4f6;
+  align-items: start;
+}
+
+.prop-row:last-child {
+  border-bottom: none;
+}
+
+.prop-row:hover {
+  background: #f9fafb;
+}
+
+.prop-name {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.prop-name code,
+.prop-type code,
+.prop-default code {
+  background: #f3f4f6;
+  padding: 0.125rem 0.375rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+  color: #374151;
+}
+
+.required {
+  color: #dc2626;
+  font-weight: bold;
+  font-size: 0.875rem;
+}
+
+.prop-description {
+  color: #6b7280;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+/* Advanced Examples */
+.advanced-examples {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.advanced-example {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+}
+
+.advanced-example h3 {
+  margin: 0;
+  padding: 1rem 1.5rem 0.5rem 1.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.advanced-example .example-description {
+  margin: 0 0 1rem 0;
+  padding: 0 1.5rem;
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+.advanced-example .code-block {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  border-top: 1px solid #e5e7eb;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .examples-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* For larger screens, optimize specific examples */
+  .example-group[data-variant-example] .example-preview,
+  .example-group[data-size-example] .example-preview {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .examples-tab,
+  .documentation-tab {
+    padding: 2rem;
+  }
+  
+  .component-info {
+    padding: 2rem;
+  }
+  
+  /* Two-column layout for variants and sizes on larger screens */
+  .examples-grid {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .documentation-tab {
+    padding: 1rem;
+  }
+  
+  .examples-tab {
+    padding: 1rem;
+  }
+  
+  .component-info {
+    padding: 1.5rem 1rem;
+    text-align: center;
+  }
+  
+  .component-info h2 {
+    font-size: 1.5rem;
+  }
+  
+  .props-header,
+  .prop-row {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  
+  .props-header > div {
+    font-weight: 600;
+    color: #374151;
+    font-size: 0.875rem;
+  }
+  
+  .prop-row > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .example-preview {
+    padding: 1.5rem 1rem;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+  
+  .example-preview > div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+}

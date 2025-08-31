@@ -1,0 +1,175 @@
+/* Button Component Styles */
+
+.akgui-button {
+  /* Base styles */
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  
+  /* Typography */
+  font-family: var(--font-family-base, system-ui, -apple-system, sans-serif);
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  
+  /* Layout */
+  border: 1px solid transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  user-select: none;
+  
+  /* Transitions */
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Focus styles */
+  outline: none;
+}
+
+.akgui-button:focus-visible {
+  outline: 2px solid #0066cc;
+  outline-offset: 2px;
+}
+
+/* Size variants */
+.akgui-button--small {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  min-height: 2rem;
+}
+
+.akgui-button--medium {
+  padding: 0.625rem 1rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  min-height: 2.5rem;
+}
+
+.akgui-button--large {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  min-height: 3rem;
+}
+
+/* Variant styles */
+.akgui-button--primary {
+  background-color: #0066cc;
+  color: #ffffff;
+  border-color: #0066cc;
+}
+
+.akgui-button--primary:hover:not(:disabled) {
+  background-color: #0052a3;
+  border-color: #0052a3;
+}
+
+.akgui-button--primary:active:not(:disabled) {
+  background-color: #003d7a;
+  border-color: #003d7a;
+}
+
+.akgui-button--secondary {
+  background-color: #ffffff;
+  color: #374151;
+  border-color: #d1d5db;
+}
+
+.akgui-button--secondary:hover:not(:disabled) {
+  background-color: #f9fafb;
+  border-color: #9ca3af;
+}
+
+.akgui-button--secondary:active:not(:disabled) {
+  background-color: #f3f4f6;
+  border-color: #6b7280;
+}
+
+.akgui-button--ghost {
+  background-color: transparent;
+  color: #374151;
+  border-color: transparent;
+}
+
+.akgui-button--ghost:hover:not(:disabled) {
+  background-color: #f3f4f6;
+  color: #111827;
+}
+
+.akgui-button--ghost:active:not(:disabled) {
+  background-color: #e5e7eb;
+}
+
+.akgui-button--danger {
+  background-color: #dc2626;
+  color: #ffffff;
+  border-color: #dc2626;
+}
+
+.akgui-button--danger:hover:not(:disabled) {
+  background-color: #b91c1c;
+  border-color: #b91c1c;
+}
+
+.akgui-button--danger:active:not(:disabled) {
+  background-color: #991b1b;
+  border-color: #991b1b;
+}
+
+/* State styles */
+.akgui-button--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.akgui-button--loading {
+  cursor: not-allowed;
+}
+
+.akgui-button--loading .akgui-button__content {
+  opacity: 0.7;
+}
+
+.akgui-button--full-width {
+  width: 100%;
+}
+
+/* Icon styles */
+.akgui-button__loading-icon {
+  animation: akgui-spin 1s linear infinite;
+  font-size: 1em;
+}
+
+.akgui-button__start-icon,
+.akgui-button__end-icon {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.akgui-button--with-start-icon .akgui-button__content {
+  margin-left: -0.125rem;
+}
+
+.akgui-button--with-end-icon .akgui-button__content {
+  margin-right: -0.125rem;
+}
+
+/* Loading animation */
+@keyframes akgui-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Content wrapper */
+.akgui-button__content {
+  display: inline-flex;
+  align-items: center;
+}

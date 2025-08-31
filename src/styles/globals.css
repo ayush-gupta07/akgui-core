@@ -1,0 +1,96 @@
+/**
+ * AKGUI Design System - Global Styles
+ * 
+ * Minimal single-theme design system
+ */
+
+:root {
+  /* LinkedIn-inspired Primary Colors */
+  --akgui-primary: #0a66c2;
+  --akgui-primary-hover: #004182;
+  --akgui-primary-light: #eef3ff;
+  --akgui-primary-dark: #004182;
+
+  /* LinkedIn-inspired Neutral Colors */
+  --akgui-gray: #666666;
+  --akgui-gray-light: #f3f2ef;
+  --akgui-gray-dark: #404040;
+  --akgui-gray-border: #d0d0d0;
+
+  /* LinkedIn-inspired Background & Text */
+  --akgui-background: #ffffff;
+  --akgui-text: #000000;
+  --akgui-text-muted: #666666;
+
+  /* Spacing - Essential only */
+  --akgui-spacing-1: 0.25rem;  /* 4px */
+  --akgui-spacing-2: 0.5rem;   /* 8px */
+  --akgui-spacing-3: 0.75rem;  /* 12px */
+  --akgui-spacing-4: 1rem;     /* 16px */
+  --akgui-spacing-6: 1.5rem;   /* 24px */
+  --akgui-spacing-8: 2rem;     /* 32px */
+
+  /* Typography - LinkedIn style */
+  --akgui-font-size-sm: 0.875rem;  /* 14px */
+  --akgui-font-size-base: 1rem;    /* 16px */
+  --akgui-font-size-lg: 1.125rem;  /* 18px */
+  --akgui-font-weight-normal: 400;
+  --akgui-font-weight-medium: 500;
+  --akgui-font-weight-semibold: 600;
+  --akgui-font-weight-bold: 700;
+
+  /* Border radius - LinkedIn style */
+  --akgui-radius: 0.5rem; /* 8px */
+  --akgui-radius-lg: 0.75rem; /* 12px */
+
+  /* Shadow - LinkedIn style (softer) */
+  --akgui-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+/* Global reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Base font family */
+.akgui-font-base {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+/* LinkedIn-inspired focus styles */
+.akgui-focus {
+  outline: 2px solid var(--akgui-primary);
+  outline-offset: 2px;
+  border-radius: var(--akgui-radius);
+}
+
+/* LinkedIn-inspired interaction states */
+.akgui-interactive {
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+
+.akgui-interactive:hover {
+  transform: translateY(-1px);
+}
+
+.akgui-interactive:active {
+  transform: translateY(0);
+}
+
+/* LinkedIn-inspired text styles */
+.akgui-text-primary {
+  color: var(--akgui-text);
+}
+
+.akgui-text-secondary {
+  color: var(--akgui-text-muted);
+}
+
+.akgui-text-brand {
+  color: var(--akgui-primary);
+}

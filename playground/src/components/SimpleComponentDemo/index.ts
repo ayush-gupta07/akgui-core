@@ -1,0 +1,1 @@
+export { SimpleComponentDemo } from './SimpleComponentDemo'

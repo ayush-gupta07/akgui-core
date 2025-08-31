@@ -1,0 +1,1 @@
+export { ComponentTabs } from './ComponentTabs'
