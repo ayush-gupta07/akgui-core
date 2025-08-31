@@ -5,7 +5,7 @@
 [![npm version](https://img.shields.io/npm/v/akgui-core?style=for-the-badge&logo=npm&logoColor=white)](https://npmjs.com/package/akgui-core)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.6-blue?style=for-the-badge&logo=typescript&logoColor=white)](https://typescriptlang.org)
 [![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://reactjs.org)
-[![Build Status](https://img.shields.io/badge/build-passing-brightgreen?style=for-the-badge)](https://github.com/your-username/akgui-core)
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen?style=for-the-badge)](https://github.com/ayush-gupta07/akgui-core)
 [![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)](./LICENSE)
 
 ## ✨ Features
@@ -116,7 +116,7 @@ function App() {
 ### Run Locally
 
 ```bash
-git clone https://github.com/your-username/akgui-core.git
+git clone https://github.com/ayush-gupta07/akgui-core.git
 cd akgui-core
 npm install
 npm run playground
@@ -142,7 +142,7 @@ Visit `http://localhost:3001` to explore:
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/akgui-core.git
+git clone https://github.com/ayush-gupta07/akgui-core.git
 cd akgui-core
 
 # Install dependencies
@@ -283,7 +283,7 @@ We welcome contributions! Please see our [Contributing Guide](./CONTRIBUTING.md)
 
 ## 📄 License
 
-MIT © [Ayush Gupta](https://github.com/your-username)
+MIT © [Ayush Gupta](https://github.com/ayush-gupta07)
 
 ## 🙏 Acknowledgments
 
@@ -297,5 +297,5 @@ MIT © [Ayush Gupta](https://github.com/your-username)
 <div align="center">
   <strong>Made with ❤️ by the AKGUI Team</strong>
   <br />
-  <a href="https://github.com/your-username/akgui-core">⭐ Star us on GitHub</a>
+  <a href="https://github.com/ayush-gupta07/akgui-core">⭐ Star us on GitHub</a>
 </div>

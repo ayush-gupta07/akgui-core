@@ -1,0 +1,31 @@
+## Welcome to AKGUI Core! 🎉
+
+Thank you for your interest in contributing to our React component library.
+
+### 🚀 Quick Links
+- 📖 [Documentation & Playground](https://akgui-core.dev) *(Coming Soon)*
+- 🤝 [Contributing Guide](./CONTRIBUTING.md)
+- 🐛 [Report a Bug](../../issues/new?template=bug_report.yml)
+- 💡 [Request a Feature](../../issues/new?template=feature_request.yml)
+- 💬 [Join Discussions](../../discussions)
+
+### 🏃‍♂️ Get Started Quickly
+1. **Try the Playground**: Run `npm run playground` to see components in action
+2. **Read the Docs**: Check out our comprehensive README
+3. **Explore Components**: Browse the `src/components` directory
+4. **Create Components**: Use `npm run create-component YourComponent`
+
+### 📋 Before You Start
+- ✅ Search existing issues to avoid duplicates
+- ✅ Read our [Contributing Guidelines](./CONTRIBUTING.md)
+- ✅ Check out our [Code of Conduct](./CODE_OF_CONDUCT.md)
+
+### 🌟 Ways to Contribute
+- **🐛 Bug Fixes**: Help us squash bugs
+- **✨ New Components**: Add new UI components
+- **📚 Documentation**: Improve docs and examples
+- **🎨 Design**: Enhance visual design and UX
+- **🧪 Testing**: Add or improve test coverage
+- **♿ Accessibility**: Make components more accessible
+
+Let's build something amazing together! 🚀
