@@ -1,6 +1,7 @@
 {
   "name": "akgui-core",
   "version": "0.0.0",
+  "type": "module",
   "description": "AKGUI - Production-ready React Component Library",
   "main": "dist/index.cjs.js",
   "module": "dist/index.es.js",
@@ -20,8 +21,8 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "test:visual": "playwright test",
-    "lint": "eslint src --ext .ts,.tsx",
-    "lint:fix": "eslint src --ext .ts,.tsx --fix",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "format": "prettier --write \"src/**/*.{ts,tsx,css,md}\"",
     "typecheck": "tsc --noEmit",
     "prepublishOnly": "npm run build",

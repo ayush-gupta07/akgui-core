@@ -13,7 +13,9 @@ export default tseslint.config([
       'coverage/**/*',
       'node_modules/**/*',
       '*.config.js',
-      '*.config.ts'
+      '*.config.ts',
+      'scripts/**/*',
+      'playground/vite.config.ts'
     ]
   },
   
@@ -74,6 +76,16 @@ export default tseslint.config([
     rules: {
       '@typescript-eslint/no-explicit-any': 'off',
       'no-console': 'off',
+    },
+  },
+  
+  // Development and utility files configuration
+  {
+    files: ['playground/**/*', 'tests/**/*', 'scripts/**/*'],
+    rules: {
+      'no-console': 'off',
+      'react-refresh/only-export-components': 'off',
+      '@typescript-eslint/no-require-imports': 'off',
     },
   },
 
