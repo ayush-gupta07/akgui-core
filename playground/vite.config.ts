@@ -2,13 +2,21 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { resolve } from 'path'
 
-// Playground development configuration
-export default defineConfig({
+// Playground configuration for both development and production
+export default defineConfig(({ mode }) => ({
   plugins: [react()],
   root: 'playground',
+  base: '/', // Ensure correct base path for Vercel
   server: {
     port: 3001,
     open: true,
+  },
+  build: {
+    outDir: 'dist',
+    emptyOutDir: true,
+    rollupOptions: {
+      input: resolve(__dirname, 'index.html'),
+    },
   },
   resolve: {
     alias: {
@@ -17,6 +25,6 @@ export default defineConfig({
     },
   },
   define: {
-    'process.env.NODE_ENV': JSON.stringify('development'),
+    'process.env.NODE_ENV': JSON.stringify(mode === 'production' ? 'production' : 'development'),
   },
-})
+}))
