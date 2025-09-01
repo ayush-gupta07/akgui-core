@@ -1,0 +1,18 @@
+{
+  "builds": [
+    {
+      "src": "playground/vite.config.ts",
+      "use": "@vercel/static-build",
+      "config": {
+        "buildCommand": "cd .. && npm install && npm run playground:build",
+        "outputDirectory": "dist"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
+}

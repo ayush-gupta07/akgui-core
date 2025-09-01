@@ -5,8 +5,8 @@ import { resolve } from 'path'
 // Playground configuration for both development and production
 export default defineConfig(({ mode }) => ({
   plugins: [react()],
-  root: 'playground',
-  base: '/', // Ensure correct base path for Vercel
+  root: resolve(__dirname),
+  base: '/',
   server: {
     port: 3001,
     open: true,

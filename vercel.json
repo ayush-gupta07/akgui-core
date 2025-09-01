@@ -1,8 +1,11 @@
 {
-  "buildCommand": "npm run playground:build",
+  "buildCommand": "./build.sh",
   "outputDirectory": "playground/dist",
-  "installCommand": "npm install",
+  "installCommand": "echo 'Dependencies will be installed by build script'",
   "framework": null,
+  "env": {
+    "NODE_VERSION": "18"
+  },
   "rewrites": [
     {
       "source": "/(.*)",
