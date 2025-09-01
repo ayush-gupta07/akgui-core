@@ -1,13 +1,11 @@
 /** @type {import('jest').Config} */
 export default {
+  preset: 'ts-jest',
   testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
-  extensionsToTreatAsEsm: ['.ts', '.tsx'],
-  
   // Transform configuration
   transform: {
     '^.+\\.(ts|tsx)$': ['ts-jest', {
-      useESM: true,
       tsconfig: {
         jsx: 'react-jsx',
         esModuleInterop: true,
