@@ -3,11 +3,13 @@ import type { ComponentConfig } from '../types/playground'
 // Import co-located demo configs
 import { buttonConfig } from '../../../src/components/Button/Button.demo'
 import { appBarConfig } from '../../../src/components/AppBar/AppBar.demo'
+import { cardConfig } from '../../../src/components/Card/Card.demo'
 
 // Central registry of all component demos (co-located approach)
 export const componentDemos: Record<string, ComponentConfig> = {
   button: buttonConfig,
   appbar: appBarConfig,
+  card: cardConfig,
 }
 
 // Get demo config by component name
