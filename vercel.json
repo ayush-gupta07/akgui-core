@@ -1,19 +1,27 @@
 {
-  "version": 2,
-  "builds": [
+  "buildCommand": "./build.sh",
+  "outputDirectory": "playground/dist",
+  "installCommand": "echo 'Dependencies will be installed by build script'",
+  "framework": null,
+  "env": {
+    "NODE_VERSION": "18"
+  },
+  "rewrites": [
     {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "buildCommand": "npm run build:playground",
-        "distDir": "playground/dist"
-      }
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ],
-  "routes": [
+  "headers": [
     {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
     }
-  ]
+  ],
+  "cleanUrls": true
 }
