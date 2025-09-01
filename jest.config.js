@@ -64,6 +64,9 @@ export default {
   // Clear mocks between tests
   clearMocks: true,
   
-  // Verbose output
-  verbose: true,
+  // Less verbose output for CI
+  verbose: false,
+  
+  // Limit workers in CI environments
+  maxWorkers: process.env.CI ? 1 : '50%',
 }
