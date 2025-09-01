@@ -17,7 +17,7 @@
     "build:types": "tsc --project tsconfig.lib.json",
     "playground": "vite --config playground/vite.config.ts",
     "create-component": "node scripts/create-component.js",
-    "test": "jest",
+    "test": "jest --passWithNoTests",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "test:visual": "playwright test",

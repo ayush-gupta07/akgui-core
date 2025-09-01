@@ -24,15 +24,11 @@ jobs:
       run: |
         npm ci --legacy-peer-deps
         
-    - name: Verify Jest installation
-      run: |
-        npx jest --version
-        
     - name: Run type checking
       run: npm run typecheck
       
     - name: Run tests
-      run: npx jest --passWithNoTests
+      run: npm test
       
     - name: Run build
       run: npm run build
