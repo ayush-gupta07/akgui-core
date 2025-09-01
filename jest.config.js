@@ -4,13 +4,15 @@ export default {
   testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
   
-  // TypeScript Jest configuration
-  globals: {
-    'ts-jest': {
+  // Transform configuration
+  transform: {
+    '^.+\\.(ts|tsx)$': ['ts-jest', {
       tsconfig: {
         jsx: 'react-jsx',
+        esModuleInterop: true,
+        allowSyntheticDefaultImports: true,
       },
-    },
+    }],
   },
   
   // Module name mapping for CSS and assets
