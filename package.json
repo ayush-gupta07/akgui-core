@@ -1,6 +1,6 @@
 {
-  "name": "akgui-core",
-  "version": "0.0.0",
+  "name": "@ayugupta/akgui-core",
+  "version": "1.0.0",
   "type": "module",
   "description": "AKGUI - Production-ready React Component Library",
   "main": "dist/index.cjs.js",
@@ -8,7 +8,8 @@
   "types": "dist/index.d.ts",
   "files": [
     "dist",
-    "src"
+    "CHANGELOG.md",
+    "README.md"
   ],
   "scripts": {
     "dev": "vite",
@@ -25,8 +26,11 @@
     "lint:fix": "eslint . --fix",
     "format": "prettier --write \"src/**/*.{ts,tsx,css,md}\"",
     "typecheck": "tsc --noEmit",
-    "prepublishOnly": "npm run build",
-    "size": "size-limit"
+    "prepublishOnly": "npm run build && npm run test && npm run lint",
+    "size": "size-limit",
+    "publish:check": "npm pack --dry-run",
+    "publish:beta": "npm publish --tag beta",
+    "release": "npm run build && npm run test && npm run lint && npm publish"
   },
   "peerDependencies": {
     "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
@@ -77,7 +81,12 @@
     "ui",
     "design-system",
     "typescript",
-    "akgui"
+    "akgui",
+    "component-library",
+    "react-components",
+    "ui-library",
+    "design-tokens",
+    "linkedin-design"
   ],
   "author": "Ayush Gupta",
   "license": "MIT",

@@ -1,0 +1,46 @@
+# Development files
+playground/
+tests/
+scripts/
+coverage/
+.github/
+docs/
+
+# Configuration files
+.eslintrc*
+eslint.config.js
+jest.config.js
+prettier.config.*
+tsconfig*.json
+vite*.config.ts
+size-limit.config.js
+
+# Development dependencies
+node_modules/
+*.log
+*.lock
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Git files
+.git/
+.gitignore
+
+# Build artifacts (keep dist/)
+# dist/ is included via package.json "files" field
+
+# Other
+README.md
+CHANGELOG.md
+CONTRIBUTING.md
+LICENSE
+SECURITY.md
+*.md
