@@ -1,0 +1,362 @@
+/* AppBar Component Styles */
+
+/* ===== BASE STYLES ===== */
+.appbar {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  box-sizing: border-box;
+  width: 100%;
+  z-index: 1000;
+}
+
+.appbar--static {
+  position: static;
+}
+
+.appbar--sticky {
+  position: sticky;
+  top: 0;
+}
+
+.appbar--fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.appbar--elevated {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-bottom: none;
+}
+
+/* ===== CONTAINER ===== */
+.appbar__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  min-height: 64px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===== BRAND SECTION ===== */
+.appbar__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  user-select: none;
+  transition: opacity 0.2s ease;
+}
+
+.appbar__brand:hover {
+  opacity: 0.8;
+}
+
+.appbar__logo {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+}
+
+.appbar__logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.appbar__title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1e293b;
+  white-space: nowrap;
+}
+
+/* ===== NAVIGATION ===== */
+.appbar__nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  margin: 0 2rem;
+}
+
+.appbar__menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0.5rem;
+}
+
+.appbar__menu-item {
+  margin: 0;
+}
+
+.appbar__menu-link {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background: none;
+  border: none;
+  border-radius: 6px;
+  color: #64748b;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.appbar__menu-link:hover:not(.appbar__menu-link--disabled) {
+  background: #f1f5f9;
+  color: #1e293b;
+}
+
+.appbar__menu-link--active {
+  background: #3b82f6;
+  color: #ffffff;
+}
+
+.appbar__menu-link--active:hover {
+  background: #2563eb;
+}
+
+.appbar__menu-link--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ===== ACTIONS SECTION ===== */
+.appbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.appbar__action-button {
+  white-space: nowrap;
+}
+
+.appbar__action-icon {
+  margin-right: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* ===== MOBILE TOGGLE ===== */
+.appbar__mobile-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-left: 0.5rem;
+}
+
+.appbar__mobile-toggle:hover {
+  background: #f1f5f9;
+}
+
+.appbar__hamburger {
+  width: 18px;
+  height: 2px;
+  background: #64748b;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.appbar__hamburger::before,
+.appbar__hamburger::after {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 2px;
+  background: #64748b;
+  transition: all 0.3s ease;
+}
+
+.appbar__hamburger::before {
+  top: -6px;
+}
+
+.appbar__hamburger::after {
+  bottom: -6px;
+}
+
+/* Hamburger animation when open */
+.appbar__mobile-toggle--open .appbar__hamburger {
+  background: transparent;
+}
+
+.appbar__mobile-toggle--open .appbar__hamburger::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.appbar__mobile-toggle--open .appbar__hamburger::after {
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+
+/* ===== MOBILE MENU ===== */
+.appbar__mobile-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 50;
+}
+
+.appbar__mobile-nav {
+  padding: 1rem 0;
+}
+
+.appbar__mobile-menu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.appbar__mobile-menu-item {
+  margin: 0;
+}
+
+.appbar__mobile-menu-link {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: none;
+  border: none;
+  color: #64748b;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
+}
+
+.appbar__mobile-menu-link:hover:not(.appbar__mobile-menu-link--disabled) {
+  background: #f8fafc;
+  color: #1e293b;
+}
+
+.appbar__mobile-menu-link--active {
+  background: #eef2ff;
+  color: #3b82f6;
+  border-left-color: #3b82f6;
+}
+
+.appbar__mobile-menu-link--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ===== MOBILE OVERLAY ===== */
+.appbar__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 40;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+  .appbar__container {
+    padding: 0 1rem;
+    min-height: 56px;
+  }
+
+  .appbar__nav--mobile {
+    display: none;
+  }
+
+  .appbar__title {
+    font-size: 1.125rem;
+  }
+
+  .appbar__actions {
+    gap: 0.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .appbar__container {
+    padding: 0 0.75rem;
+  }
+
+  .appbar__brand {
+    gap: 0.5rem;
+  }
+
+  .appbar__logo {
+    height: 32px;
+    width: 32px;
+  }
+
+  .appbar__title {
+    font-size: 1rem;
+  }
+}
+
+/* ===== UTILITY CLASSES ===== */
+.appbar--transparent {
+  background: transparent;
+  border-bottom: none;
+}
+
+.appbar--dark {
+  background: #1e293b;
+  border-bottom-color: #334155;
+}
+
+.appbar--dark .appbar__title {
+  color: #ffffff;
+}
+
+.appbar--dark .appbar__menu-link {
+  color: #cbd5e1;
+}
+
+.appbar--dark .appbar__menu-link:hover:not(.appbar__menu-link--disabled) {
+  background: #334155;
+  color: #ffffff;
+}
+
+.appbar--dark .appbar__hamburger,
+.appbar--dark .appbar__hamburger::before,
+.appbar--dark .appbar__hamburger::after {
+  background: #cbd5e1;
+}
+
+.appbar--dark .appbar__mobile-menu {
+  background: #1e293b;
+  border-bottom-color: #334155;
+}
+
+.appbar--dark .appbar__mobile-menu-link {
+  color: #cbd5e1;
+}
+
+.appbar--dark .appbar__mobile-menu-link:hover:not(.appbar__mobile-menu-link--disabled) {
+  background: #334155;
+  color: #ffffff;
+}
