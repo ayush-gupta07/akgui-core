@@ -32,7 +32,7 @@ jobs:
       run: npm run typecheck
       
     - name: Run tests
-      run: npm test -- --passWithNoTests
+      run: npx jest --passWithNoTests
       
     - name: Run build
       run: npm run build
